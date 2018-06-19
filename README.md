@@ -33,7 +33,7 @@ By default it will only print current php version (tidy format) in the dashboard
 
 	define( 'BEA_PHP_VERSION', '7.2' );
 
-it will compare the two versions and if it does not match you will be alerted. It's especially useful when dealing with multiple environnements.
+it will compare the two versions and if it does not match you will be alerted. It's especially useful when dealing with multiple environments.
 
 ## Filters
 
