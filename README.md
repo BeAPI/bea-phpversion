@@ -61,6 +61,14 @@ BEA - PHP version is licensed under the [GPLv3 or later](LICENSE.md).
 
 ## Changelog ##
 
+### 1.0.2
+* 20 June 2018
+* Better approach, make the (alert) message shiny
+
+### 1.0.1
+* 20 June 2018
+* fix missing hooks
+
 ### 1.0.0
 * 19 June 2018
 * Initial
