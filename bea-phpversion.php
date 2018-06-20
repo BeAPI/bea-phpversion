@@ -33,9 +33,9 @@ class BEA_PHP_Version {
 
 	public function generate_inline_styles( $version_not_match ) {
 		$styles       = 'position: fixed;top: 2rem;right: 2rem;padding: 1rem;z-index: 999;';
-		$life_is_cool = esc_attr( apply_filters( 'bea_phpversion_success_inline_styles', 'background-color: #dff0d8;border: 1px solid #d0e9c6;color: #3c763d;' ) );
-		$achtung      = esc_attr( apply_filters( 'bea_phpversion_error_inline_styles', 'background-color: #f2dede;border: 1px solid #ebcccc;color: #a94442;' ) );
-		$styles       .= $version_not_match ? $achtung : $life_is_cool;
+		$life_is_cool = apply_filters( 'bea_phpversion_success_inline_styles', 'background-color: #dff0d8;border: 1px solid #d0e9c6;color: #3c763d;' );
+		$achtung      = apply_filters( 'bea_phpversion_error_inline_styles', 'background-color: #f2dede;border: 1px solid #ebcccc;color: #a94442;' );
+		$styles      .= $version_not_match ? $achtung : $life_is_cool;
 
 		return esc_attr( apply_filters( 'bea_phpversion_inline_styles', $styles ) );
 	}
