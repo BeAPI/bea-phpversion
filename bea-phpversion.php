@@ -22,7 +22,7 @@ Author URI: https://beapi.fr
 */
 
 defined( 'ABSPATH' )
-	or die( '-No-' );
+or die( '-No-' );
 
 class BEA_PHP_Version {
 
@@ -32,13 +32,13 @@ class BEA_PHP_Version {
 	}
 
 	public function generate_inline_styles( $version_not_match ) {
-	    $styles       = 'position: fixed;top: 2rem;right: 2rem;padding: 1rem;z-index: 999;';
-	    $life_is_cool = esc_attr( apply_filters( 'bea_phpversion_success_inline_styles', 'background-color: #dff0d8;border: 1px solid #d0e9c6;color: #3c763d;' ) );
+		$styles       = 'position: fixed;top: 2rem;right: 2rem;padding: 1rem;z-index: 999;';
+		$life_is_cool = esc_attr( apply_filters( 'bea_phpversion_success_inline_styles', 'background-color: #dff0d8;border: 1px solid #d0e9c6;color: #3c763d;' ) );
 		$achtung      = esc_attr( apply_filters( 'bea_phpversion_error_inline_styles', 'background-color: #f2dede;border: 1px solid #ebcccc;color: #a94442;' ) );
-	    $styles       .= $version_not_match ? $achtung : $life_is_cool;
+		$styles       .= $version_not_match ? $achtung : $life_is_cool;
 
-	    return esc_attr( apply_filters( 'bea_phpversion_inline_styles', $styles ) );
-    }
+		return esc_attr( apply_filters( 'bea_phpversion_inline_styles', $styles ) );
+	}
 
 	public function add_ribbon() {
 
@@ -47,16 +47,17 @@ class BEA_PHP_Version {
 			return;
 		}
 
-		$version            = $this->normalize_php_version( $this->get_version() );
-		$version_not_match  = $this->version_not_match( $version );
+		$version           = $this->normalize_php_version( $this->get_version() );
+		$version_not_match = $this->version_not_match( $version );
 
-		echo sprintf('<div id="phpversion" class="phpversion" style="%s">%s</div>', $this->generate_inline_styles( $version_not_match ), $this->generate_message( $version, $version_not_match ) );
+		echo sprintf( '<div id="phpversion" class="phpversion" style="%s">%s</div>', $this->generate_inline_styles( $version_not_match ), $this->generate_message( $version, $version_not_match ) );
 	}
 
 	protected function generate_message( $version, $version_not_match ) {
 		$message = ( $version_not_match )
-							? __( 'The current PHP version does not match project\'s version !', 'bea-phpversion' )
-							: sprintf( 'PHP %s', $version );
+			? __( 'The current PHP version does not match project\'s version !', 'bea-phpversion' )
+			: sprintf( 'PHP %s', $version );
+
 		return $message;
 	}
 
@@ -74,7 +75,7 @@ class BEA_PHP_Version {
 	}
 
 	protected function get_version() {
-		return ( phpversion('tidy') ) ? phpversion('tidy') : phpversion();
+		return ( phpversion( 'tidy' ) ) ? phpversion( 'tidy' ) : phpversion();
 	}
 
 }
@@ -87,5 +88,5 @@ function bea_phpversion_load() {
 
 add_action( 'init', 'bea_phpversion_load_i18n' );
 function bea_phpversion_load_i18n() {
-	load_muplugin_textdomain( 'bea-phpversion', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+	load_muplugin_textdomain( 'bea-phpversion', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
