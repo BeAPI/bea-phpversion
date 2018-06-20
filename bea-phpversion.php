@@ -4,7 +4,7 @@ Plugin Name: BEA PHP Version
 Plugin URI: https://github.com/BeAPI/bea-phpversion
 Description: Be API PHP version
 Author: https://beapi.fr
-Version: 0.1.0
+Version: 0.1.1
 Author URI: https://beapi.fr
  ----
  Copyright 2018 Be API Technical team (human@beapi.fr)
@@ -102,5 +102,13 @@ class BEA_PHP_Version {
 
 }
 
-$bea_phpversion = new BEA_PHP_Version;
-$bea_phpversion->hooks();
+add_action( 'plugins_loaded', 'bea_phpversion_load' );
+function bea_phpversion_load() {
+	$bea_phpversion = new BEA_PHP_Version;
+	$bea_phpversion->hooks();
+}
+
+add_action( 'init', 'bea_phpversion_load_i18n' );
+function bea_phpversion_load_i18n() {
+	load_muplugin_textdomain( 'bea-phpversion', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+}
