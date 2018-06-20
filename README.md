@@ -8,10 +8,8 @@ Check current PHP version and optionally compare with your project's requirement
 
 ## Screenshots
 
-![Error displayed in widget at glance](/assets/screen-error-glance.png)
-![Error displayed in admin footer text](/assets/screen-error-footer.png)
-![php version displayed in widget at glance](/assets/screen-glance.png)
-![php version displayed in admin footer text](/assets/screen-footer.png)
+![Error if BEA_PHP_VERSION and current PHP version does not match](/assets/screen-error-front.png)
+![success : display only php version](/assets/screen-ok-front.png)
 
 ## Installation
 
@@ -36,7 +34,10 @@ it will compare the two versions and if it does not match you will be alerted. I
 
 ## Filters
 
-*bea_phpversion_is_allowed* : default is `is_super_admin()` (which allows only administrators on single installations).
+* bea_phpversion_is_allowed* : default is `is_super_admin()` (which allows only administrators on single installations).
+* bea_phpversion_success_inline_styles
+* bea_phpversion_error_inline_styles
+* bea_phpversion_inline_styles : global styles
 
 ## Contributing
 
