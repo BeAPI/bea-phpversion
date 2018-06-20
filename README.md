@@ -17,8 +17,7 @@ Check current PHP version and optionally compare with your project's requirement
 
 ### WordPress
 
-- Download and install using the built-in WordPress plugin installer or optionnaly, consider using it as mu-plugin
-- Site activate in the "Plugins" area of the admin.
+- Consider using it as [mu-plugin](https://codex.wordpress.org/Must_Use_Plugins), install it in `wp-content/mu-plugins`
 - Nothing to do then !
 
 ### [Composer](http://composer.rarst.net/)
