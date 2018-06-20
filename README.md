@@ -34,10 +34,10 @@ it will compare the two versions and if it does not match you will be alerted. I
 
 ## Filters
 
-* bea_phpversion_is_allowed* : default is `is_super_admin()` (which allows only administrators on single installations).
-* bea_phpversion_success_inline_styles
-* bea_phpversion_error_inline_styles
-* bea_phpversion_inline_styles : global styles
+* _bea_phpversion_is_allowed_ : default is `is_super_admin()` (which allows only administrators on single installations).
+* _bea_phpversion_success_inline_styles_
+* _bea_phpversion_error_inline_styles_
+* _bea_phpversion_inline_styles_ : global styles
 
 ## Contributing
 
