@@ -1,6 +1,6 @@
 <a href="https://beapi.fr">![Be API Github Banner](/assets/banner-github.png)</a>
 
-# BEA PHP Version #
+# BE API PHP Version #
 
 ## Description ##
 
@@ -8,7 +8,7 @@ Check current PHP version and optionally compare with your project's requirement
 
 ## Screenshots
 
-![Error if BEA_PHP_VERSION and current PHP version does not match](/assets/screen-error-front.png)
+![Error if BEAPI_PHP_VERSION and current PHP version does not match](/assets/screen-error-front.png)
 ![success : display only php version](/assets/screen-ok-front.png)
 
 ## Installation
@@ -20,24 +20,24 @@ Check current PHP version and optionally compare with your project's requirement
 
 ### [Composer](http://composer.rarst.net/)
 
-- Add repository source : `{ "type": "vcs", "url": "https://github.com/BeAPI/bea-phpversion" }`.
-- Include `"bea/bea-phpversion": "dev-master"` in your composer file for last master's commits or a tag released.
+- Add repository source : `{ "type": "vcs", "url": "https://github.com/BeAPI/beapi-phpversion" }`.
+- Include `"beapi/beapi-phpversion": "dev-master"` in your composer file for last master's commits or a tag released.
 - Nothing to do then !
 
 ## Optional
 
 By default it will only print current php version (tidy format) in the dashboard at glance and in admin footer text but if you add a constant in your wp-config (or dotenv) that defines the php version of your project (php version in production) :
 
-	define( 'BEA_PHP_VERSION', '7.2' );
+	define( 'BEAPI_PHP_VERSION', '7.2' );
 
 it will compare the two versions and if it does not match you will be alerted. It's especially useful when dealing with multiple environments.
 
 ## Filters
 
-* _bea_phpversion_is_allowed_ : default is `is_super_admin()` (which allows only administrators on single installations).
-* _bea_phpversion_success_inline_styles_
-* _bea_phpversion_error_inline_styles_
-* _bea_phpversion_inline_styles_ : global styles
+* _beapi_phpversion_is_allowed_ : default is `is_super_admin()` (which allows only administrators on single installations).
+* _beapi_phpversion_success_inline_styles_
+* _beapi_phpversion_error_inline_styles_
+* _beapi_phpversion_inline_styles_ : global styles
 
 ## Contributing
 
@@ -57,7 +57,7 @@ If you really like what we do or want to thank us for our quick work, feel free 
 
 ## License
 
-BEA - PHP version is licensed under the [GPLv3 or later](LICENSE.md).
+BEAPI - PHP version is licensed under the [GPLv3 or later](LICENSE.md).
 
 ## Changelog ##
 

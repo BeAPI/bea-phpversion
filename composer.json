@@ -1,11 +1,11 @@
 {
-  "name": "bea/bea-phpversion",
+  "name": "beapi/beapi-phpversion",
   "description": " Be API PHP Version : a small and light utility to check current php version",
   "minimum-stability": "stable",
   "license": "GPL-2.0",
   "authors": [
     {
-      "name": "BeAPI",
+      "name": "Be API",
       "email": "technique@beapi.fr"
     }
   ],
